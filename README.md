@@ -13,14 +13,14 @@ In the Pybank analysis we seek to show the financial summary of a company.
 With this analysis we can show the profits & Losses over the timeframe of the data set. 
 The program included will read the data from the budget_data.csv provided in (PyBank->Resources). 
 
-In the Pybank directory launch the main.py file and run the code. This will produce the analysis in the terminal and write them to a new text file which will be stored in the Analysis folder (Pybank->Analysis->budget_analysis.txt)
+In the Pybank directory launch the main.py file and run the code. This will produce the analysis in the terminal and write them to a new text file which will be stored in the Analysis folder (Pybank->analysis->budget_analysis.txt)
 
 ----PyPoll (election analysis)----
 
 In the PyPoll analysis we seek to show the winner of an election from Colorado.
 With this analysis we can calculate to vote totals and percentages for each candidate in the election. The data from the election is provided in the election_data.csv file located in (Pypoll-> Resources)
 
-In the PyPoll directory launchb the main.py file and run the code. This will produce the election results in the terminal and write them to a new text file which will be stored in the Analysis folder (PyPoll->Analsysis->election_analysis.txt)
+In the PyPoll directory launch the main.py file and run the code. This will produce the election results in the terminal and write them to a new text file which will be stored in the Analysis folder (PyPoll->Analsysis->election_analysis.txt)
 
 
 ----Credits----
