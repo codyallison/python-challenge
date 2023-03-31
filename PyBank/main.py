@@ -16,7 +16,7 @@ with open(budget_csv) as csvfile:
     #skip first row
     next(csvreader)
 
-    #add column 1 into its own list, add column 2 into its own list
+    #add column 1 into its own list, add column 2 (as integer) into its own list
     for row in csvreader:
         months.append(row[0])
         profit_losses.append((int(row[1])))
