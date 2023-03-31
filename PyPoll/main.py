@@ -8,7 +8,6 @@ election_csv = os.path.join("Resources", "election_data.csv")
 #list to store candidate names
 
 candidateTotals = {}
-candidateList=[]
 
 #initialize total vote counter
 totalVotes = 0
@@ -25,20 +24,22 @@ with open(election_csv) as csvfile:
     #skip first row
     next(csvreader)
 
+#--------Calculate Election totals--------------
+
     #for each row add 1 vote to total vote count, and which candidate received it
     for row in csvreader:
         totalVotes +=1
         candidate = row[2]
 
-        #if candidate not in candidate list, add to list
-        if candidate not in candidateList:
-            candidateList.append(candidate)
-            #intialize vote count for candidate 
+        #add one vote to individual candidate total
+        try:
+            candidateTotals[candidate] += 1
+        #if keyerror (i.e. Not in the list already) add entry and set to 0
+        except KeyError:
             candidateTotals[candidate] = 0
-        #add one vote for specific candidate    
-        candidateTotals[candidate] += 1
 
-    #election results
+
+#---------Printing Election Summary---------------------------------------#
     print("Election Results\n-------------------------")
     print(f"Total votes : {totalVotes}\n-------------------------")
     
