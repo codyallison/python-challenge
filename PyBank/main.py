@@ -23,9 +23,7 @@ with open(budget_csv) as csvfile:
 
     #calculate monthly change (next month - current month) and store to list
     for monthly_profit in range(len(profit_losses)-1):
-        currentMonthProfit = monthly_profit
-        NextMonthProfit = monthly_profit + 1
-        monthly_change.append(profit_losses[NextMonthProfit] - profit_losses[currentMonthProfit])
+        monthly_change.append(profit_losses[monthly_profit + 1] - profit_losses[monthly_profit])
 
     #total number of months in data set
     totalMonths = len(months)
@@ -40,7 +38,7 @@ with open(budget_csv) as csvfile:
     maxMonthlyChange = max(monthly_change)
     minMonthlyChange = min(monthly_change)
 
-    #find index of month associated to Max/Min Changes
+    #find index of month associated to Max/Min Changes. +1 to pick the second month involved in the monthly change calculation
     maxChangeMonthindex = monthly_change.index(max(monthly_change))+1
     maxChangeMonth = months[maxChangeMonthindex]
     minChangeMonthindex = monthly_change.index(min(monthly_change))+1
